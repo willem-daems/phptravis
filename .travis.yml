@@ -1,4 +1,3 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
 
 # list any PHP version you want to test against
@@ -13,8 +12,3 @@ php:
   - 5.4
   # aliased to a recent 5.5.x version
   - 5.5
-
-script:
-    # Install CodeSniffer
-    - pear package-validate package.xml
-    - php scripts/phpcs CodeSniffer.php CodeSniffer --standard=PEAR --report=summary --ignore=*/tests/* -np
