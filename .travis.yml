@@ -15,7 +15,5 @@ php:
   - 5.5
 
 # Install CodeSniffer
-    - pear install --alldeps PHP_CodeSniffer
-    - phpenv rehash
-    - git clone git://github.com/mrchrisadams/WordPress-Coding-Standards.git $(pear config-get php_dir)/PHP/CodeSniffer/Standards/WordPress
-
+    - pear package-validate package.xml
+    - php scripts/phpcs CodeSniffer.php CodeSniffer --standard=PEAR --report=summary --ignore=*/tests/* -np
